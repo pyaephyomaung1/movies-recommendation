@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 public class Product {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY )
-    private long id;
+    private int id;
 
     @Column(nullable = false)
     private String name;
@@ -46,7 +46,7 @@ public class Product {
         name = "product_detail_images",
         joinColumns = @JoinColumn( name = "product_id" )
     )
-    @Column(name = "image_url")
+    @Column(name = "image_url" , nullable = true)
     private List<String> detailImageUrls = new ArrayList<>();
 
     @ManyToOne

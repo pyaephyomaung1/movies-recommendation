@@ -45,7 +45,7 @@ public class CategoryService {
     /**
      * Get Category by ID
      */
-    public CategoryDTO findById(long id) {
+    public CategoryDTO findById(int id) {
         Category category = categoryRepository.findById(id)
             .orElseThrow(() -> new IllegalArgumentException("Category not found with ID: " + id));
         return EntityUtils.toCategoryDTO(category);
@@ -64,7 +64,7 @@ public class CategoryService {
     /**
      * Delete Category by ID
      */
-    public void delete(long id) {
+    public void delete(int id) {
         Category category = categoryRepository.findById(id)
             .orElseThrow(() -> new IllegalArgumentException("Category not found with ID: " + id));
 
