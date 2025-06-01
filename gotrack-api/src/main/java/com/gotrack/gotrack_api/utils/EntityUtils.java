@@ -15,10 +15,6 @@ public class EntityUtils {
    
     public static ArtistDTO toArtistDTO(Artist artist) {
         String imageUrl = imagePath + artist.getProfileImage();
-        Set<BandDTO> bandDTOs = artist.getBands().stream().map(band -> new BandDTO(
-            band.getId(),
-            band.
-        )).collect(Collectors.toSet());
         return new ArtistDTO(
             artist.getId(),
             artist.getName(),
@@ -27,9 +23,8 @@ public class EntityUtils {
             artist.getDateOfDeath(),
             artist.getNationality(),
             artist.getBiography(),
-            artist.getBands(
-
-            )
+            artist.getBands().stream().map(BandDTO::class)
+            
         );
     }
 }
