@@ -2,6 +2,7 @@ package com.gotrack.gotrack_api.model;
 
 import java.util.Set;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,6 +27,7 @@ public class Band {
     private String bandCover;
     private String activeYear;
     private String origin;
+    @Column(columnDefinition="TEXT")
     private String overview;
 
     // Many-to-many: band members
