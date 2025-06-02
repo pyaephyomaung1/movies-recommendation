@@ -3,23 +3,31 @@ package com.gotrack.gotrack_api.model;
 import java.util.HashSet;
 import java.util.Set;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+import jakarta.persistence.Column; // Consider replacing
+import jakarta.persistence.Entity; // Added
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.GenerationType; // Added
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
-@Data
+@Data // Consider replacing with @Getter, @Setter, @ToString.Exclude, @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "band")
+// Exclude relationship fields from equals and hashCode to prevent infinite recursion
+@EqualsAndHashCode(exclude = {"members", "albums", "tracks", "genres"})
+// Exclude relationship fields from toString to prevent infinite recursion
+@ToString(exclude = {"members", "albums", "tracks", "genres"})
 public class Band {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,30 +40,64 @@ public class Band {
     private String overview;
 
     // Many-to-many: band members
+    // This is the owning side, JPA will create/manage the join table
     @ManyToMany
     @JoinTable(
-        name = "band_members",
-        joinColumns = @JoinColumn(name = "band_id"),
-        inverseJoinColumns = @JoinColumn(name = "artist_id")
+        name = "band_members", // Join table name
+        joinColumns = @JoinColumn(name = "band_id"), // FK in join table referencing Band
+        inverseJoinColumns = @JoinColumn(name = "artist_id") // FK in join table referencing Artist
     )
-    private Set<Artist> members  = new HashSet<>();
+    private Set<Artist> members  = new HashSet<>(); // Initialize collection
 
     // One-to-many: albums released by the band
+    // This is the parent side, relationship owned by Album
     @OneToMany(mappedBy = "bandOwner")
-    private Set<Album> albums  = new HashSet<>();
+    private Set<Album> albums  = new HashSet<>(); // Initialize collection
 
     // One-to-many: tracks released by the band (non-album singles, if any)
+    // This is the parent side, relationship owned by Track
     @OneToMany(mappedBy = "band")
-    private Set<Track> tracks  = new HashSet<>();
+    private Set<Track> tracks  = new HashSet<>(); // Initialize collection
 
-    // Many-to-many: band genres (Band owns the relationship)
-    @ManyToMany // Band owns the relationship as no 'mappedBy'
+    // Many-to-many: band genres
+    // This is the owning side, JPA will create/manage the join table
+     @ManyToMany
     @JoinTable(
-        name = "band_genres", // Assuming a join table for Band-Genre
-        joinColumns = @JoinColumn(name = "band_id"),
-        inverseJoinColumns = @JoinColumn(name = "genre_id")
+        name = "band_genre", // Join table name
+        joinColumns = @JoinColumn(name = "band_id"), // FK in join table referencing Band
+        inverseJoinColumns = @JoinColumn(name = "genre_id") // FK in join table referencing Genre
     )
-    private Set<Genre> genres = new HashSet<>();
+    private Set<Genre> genres = new HashSet<>(); // Initialize collection
+
+    // --- Relationship Management Methods ---
+
+    /**
+     * Adds an artist as a member to this band, updating both sides.
+     * This band owns the Many-to-Many relationship with Artist members.
+     * @param artist The artist to add as a member
+     * @return this band (for method chaining)
+     */
+    public Band addMember(Artist artist){
+        if(artist != null) {
+            this.members.add(artist);       // Add to Band's members collection (owning side)
+            artist.getBands().add(this);    // Add Band to Artist's bands collection (inverse side)
+        }
+        return this;
+    }
+
+    /**
+     * Removes an artist member from this band, updating both sides.
+     * @param artist The artist to remove
+     * @return this band (for method chaining)
+     */
+     public Band removeMember(Artist artist){
+        // Check if member is not null AND is currently in our collection
+        if(artist != null && this.members.contains(artist)){
+            this.members.remove(artist);        // Remove from Band's members collection
+            artist.getBands().remove(this);     // Remove Band from Artist's bands collection
+        }
+        return this;
+    }
 
     /**
      * Adds an album to this band's discography.
@@ -68,7 +110,10 @@ public class Band {
             // Delegate to the Album's setter which manages the foreign key
             album.setBandOwner(this);
             // Add to our collection (redundant if album.setBandOwner is implemented correctly, but safe)
-            this.albums.add(album);
+            // Check if already present to avoid duplicates if Set behaves unexpectedly
+             if (!this.albums.contains(album)) {
+                 this.albums.add(album);
+             }
         }
         return this;
     }
@@ -94,47 +139,21 @@ public class Band {
     }
 
     /**
-     * Adds an artist as a member to this band, updating both sides.
-     * This band owns the Many-to-Many relationship with Artist members.
-     * @param member The artist to add as a member
-     * @return this band (for method chaining)
-     */
-    public Band addMember(Artist member){
-        if(member != null) {
-            this.members.add(member);       // Add to Band's members collection
-            member.getBands().add(this);    // Add Band to Artist's bands collection
-        }
-        return this;
-    }
-
-    /**
-     * Removes an artist member from this band, updating both sides.
-     * @param member The artist to remove
-     * @return this band (for method chaining)
-     */
-     public Band removeMember(Artist member){
-        // Check if member is not null AND is currently in our collection
-        if(member != null && this.members.contains(member)){
-            this.members.remove(member);        // Remove from Band's members collection
-            member.getBands().remove(this);     // Remove Band from Artist's bands collection
-        }
-        return this;
-    }
-
-    /**
      * Adds a track released by this band. Delegates to Track.setBand().
      * @param track The track to add
      * @return this band (for method chaining)
      */
     public Band addTrack(Track track) {
-        // Corrected return type from Artist to Band
         if (track != null) {
             // Delegate to the Track's setter which manages the foreign key
             track.setBand(this);
              // Add to our collection (redundant if track.setBand is implemented correctly, but safe)
-             this.tracks.add(track);
+             // Check if already present to avoid duplicates if Set behaves unexpectedly
+            if (!this.tracks.contains(track)) {
+                 this.tracks.add(track);
+            }
         }
-        return this; // Return Band
+        return this;
     }
 
     /**
@@ -143,7 +162,6 @@ public class Band {
      * @return this band (for method chaining)
      */
     public Band removeTrack(Track track) {
-        // Corrected return type from Artist to Band
         // Check if track is not null AND is currently in our collection
         if (track != null && this.tracks.contains(track)){
              // Check if this band is the actual owner before nulling the foreign key
@@ -154,7 +172,7 @@ public class Band {
             // Remove from our collection
             this.tracks.remove(track);
         }
-        return this; // Return Band
+        return this;
     }
 
      /**
@@ -164,16 +182,14 @@ public class Band {
      * @return this band (for method chaining)
      */
     public Band addGenre(Genre genre) {
-        // Corrected return type from Artist to Band
         if (genre != null) {
-            this.genres.add(genre);         // Add to Band's genres collection
-            
-            // Corrected: Add Band to Genre's bands collection
-            if (genre.getBands() != null) { // Safety check
+            this.genres.add(genre);         // Add to Band's genres collection (owning side)
+            // Add Band to Genre's bands collection (inverse side)
+            if (genre.getBands() != null) { // Safety check for inverse side collection
                  genre.getBands().add(this);
             }
         }
-        return this; // Return Band
+        return this;
     }
 
     /**
@@ -182,16 +198,15 @@ public class Band {
      * @return this band (for method chaining)
      */
     public Band removeGenre(Genre genre) {
-        // Corrected return type from Artist to Band
         // Check if genre is not null AND is currently in our collection
         if (genre != null && this.genres.contains(genre)) {
             this.genres.remove(genre);          // Remove from Band's genres collection
-            
-            // Remove Band from Genre's bands collection
-            if (genre.getBands() != null) { // Safety check
+             // Remove Band from Genre's bands collection (inverse side)
+             if (genre.getBands() != null) { // Safety check for inverse side collection
                  genre.getBands().remove(this);
             }
         }
-        return this; // Return Band
+        return this;
     }
+    // You can add bulk add/remove methods here as well
 }
