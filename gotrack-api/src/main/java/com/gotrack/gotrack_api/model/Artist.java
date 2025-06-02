@@ -1,5 +1,6 @@
 package com.gotrack.gotrack_api.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.Column;
@@ -33,13 +34,83 @@ public class Artist {
 
     // Many-to-many: artist can join multiple bands, band has many artists
     @ManyToMany(mappedBy = "members")
-    private Set<Band> bands;
+    private Set<Band> bands = new HashSet<>();
 
     // One-to-many: artist's solo albums
     @OneToMany(mappedBy = "artistOwner")
-    private Set<Album> albums;
+    private Set<Album> albums = new HashSet<>();;
 
     // One-to-many: artist's solo tracks
     @OneToMany(mappedBy = "artist")
-    private Set<Track> tracks;
+    private Set<Track> tracks = new HashSet<>();;
+
+    @ManyToMany
+    private Set<Genre> genres = new HashSet<>();;
+
+
+    public Artist joinBand(Band band){
+        if( band != null ) {
+            this.bands.add(band);
+            band.getMembers().add(this);
+        }   
+        return this;
+    }
+
+    public Artist removeBand(Band band){
+        if( band != null ) {
+            this.bands.remove(band);
+            band.getMembers().remove(this);
+        }
+        return  this;
+    }
+
+    public Artist addAlbum(Album album){
+        if ( album != null ) {
+            album.setArtistOwner(this);
+            this.albums.add(album);
+        }
+        return this;
+    }
+
+    public Artist removeAlbum(Album album){
+        if (album!=null){
+            album.setArtistOwner(null);
+            this.albums.remove(album);
+        }
+        return this;
+    }
+
+    public Artist addTrack(Track track){
+        if(track != null){
+            track.setArtist(this);
+            this.tracks.add(track);
+        }   
+        return this;
+    }
+
+    public Artist removeTrack(Track track){
+        if (track != null){
+            if(track.getArtist() == this){
+                track.setArtist(null);
+            }
+            this.tracks.remove(track);
+        }
+        return this;
+    }
+
+    public Artist addGenre(Genre genre){
+        if(genre != null){
+            this.genres.add(genre);
+            genre.getArtists().add(this);
+        }
+        return this;
+    }
+
+    public Artist removeGenre(Genre genre){
+        if (genre != null) {
+            this.genres.remove(genre);
+            genre.getArtists().remove(this);
+        }
+        return this;
+    }
 }

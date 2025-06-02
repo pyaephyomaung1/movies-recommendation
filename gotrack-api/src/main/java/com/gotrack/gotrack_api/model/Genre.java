@@ -26,4 +26,10 @@ public class Genre {
 
     @ManyToMany(mappedBy= "genres")
     private Set<Track> tracks;
+
+    @ManyToMany(mappedBy="genres")
+    private Set<Artist> artists;
+
+    @ManyToMany(mappedBy="genres")
+    private Set<Band> bands;
 }
