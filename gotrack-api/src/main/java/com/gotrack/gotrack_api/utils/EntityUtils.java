@@ -52,4 +52,18 @@ public class EntityUtils {
             tracks
         );
     }
+
+    // public static Artist toArtist(
+    //     ArtistDTO dto,
+    //     BandRepository bandRepository,
+    //     AlbumRepository albumRepository,
+    //     TrackRepository trackRepository,
+    //     GenreRepository genreRepository
+    // ){
+    //     if(dto == null) return null;
+
+    //     Artist artist = new Artist();
+
+    //     return artist;
+    // }
 }
