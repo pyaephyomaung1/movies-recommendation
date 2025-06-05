@@ -13,7 +13,7 @@ INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES (
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Led Zeppelin', 'ledzeppelin_cover.jpg', '1968-1980', 'London, England', 'One of the most influential rock bands, considered pioneers of hard rock and heavy metal.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('AC/DC', 'acdc_cover.jpg', '1973-Present', 'Sydney, Australia', 'Australian hard rock band known for their high-energy rock and roll sound.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Black Sabbath', 'blacksabbath_cover.jpg', '1968-2017', 'Birmingham, England', 'Pioneers of heavy metal music.');
-INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Van Halen', 'vanhalen_cover.jpg', '1972-2020', 'Pasadena, California', 'Hard rock band known for Eddie Van Halen\'s influential guitar playing.');
+INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Van Halen', 'vanhalen_cover.jpg', '1972-2020', 'Pasadena, California', 'Hard rock band known for Eddie Van Halens influential guitar playing.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Red Hot Chili Peppers', 'rhcp_cover.jpg', '1983-Present', 'Los Angeles, California', 'Rock band blending funk, punk, rock, and psychedelic music.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Coldplay', 'coldplay_cover.jpg', '1996-Present', 'London, England', 'British rock band known for their anthemic sound and global popularity.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Foo Fighters', 'foofighters_cover.jpg', '1994-Present', 'Seattle, Washington', 'American rock band formed by Nirvana drummer Dave Grohl.');
@@ -50,11 +50,6 @@ INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES (
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Def Leppard', 'defleppard_cover.jpg', '1977-Present', 'Sheffield, England', 'English rock band, part of the new wave of British heavy metal.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Journey', 'journey_cover.jpg', '1973-Present', 'San Francisco, California', 'American rock band known for their classic rock ballads.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Boston', 'boston_cover.jpg', '1975-Present', 'Boston, Massachusetts', 'American rock band known for their layered guitar harmonies.');
-
-
--- Myanmar Bands -- 
-
-
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Big Bag', 'bigbag_band.jpg', '2000s-Present', 'Myanmar', 'Prominent alternative rock band known for their energetic performances.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('IRON CROSS', 'ironcross_band.jpg', '1980s-Present', 'Myanmar', 'Highly influential and legendary rock band, often considered icons of Myanmar rock.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Idiots', 'idiots_band.jpg', '2000s-Present', 'Myanmar', 'Popular rock band known for their emotional lyrics and strong vocals.');
