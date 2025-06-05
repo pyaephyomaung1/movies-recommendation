@@ -55,3 +55,12 @@ INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES (
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Idiots', 'idiots_band.jpg', '2000s-Present', 'Myanmar', 'Popular rock band known for their emotional lyrics and strong vocals.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Square Lake Pirates', 'slp_band.jpg', '2010s-Present', 'Myanmar', 'Contemporary rock band in the Myanmar music scene.');
 INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Velocity', 'velocity_band.jpg', '2000s-Present', 'Myanmar', 'Rock band known for their solid performances.');
+
+INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('Twice', 'twice_cover.jpg', '2015-present', 'Seoul, South Korea', 'Popular K-pop girl group known for their upbeat and catchy songs.');
+INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('IVE', 'ive_cover.jpg', '2021-present', 'Seoul, South Korea', 'K-pop girl group known for their energetic performances and modern sound.');
+INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('NMixx', 'nmixx_cover.jpg', '2022-present', 'Seoul, South Korea', 'K-pop girl group known for their unique blend of genres and captivating performances.');
+INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('NewJeans', 'newjeans_cover.jpg', '2022-present', 'Seoul, South Korea', 'K-pop girl group known for their fresh and youthful sound, blending pop and R&B elements.');
+
+INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('OneOKRock', 'oneokrock_cover.jpg', '2005-present', 'Tokyo, Japan', 'Japanese rock band known for their energetic live performances and blend of rock and pop sounds.');
+
+INSERT INTO band (band_name, band_cover, active_year, origin, overview) VALUES ('BabyMetal', 'babymetal_cover.jpg', '2010-present', 'Tokyo, Japan', 'Japanese metal idol group known for their unique blend of heavy metal and J-pop, with a distinctive performance style.');
