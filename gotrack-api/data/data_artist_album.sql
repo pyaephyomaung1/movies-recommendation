@@ -348,3 +348,168 @@ INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES
 INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Zoom In', 'zoom_in_cover.jpg', '2021', 41, NULL);
 INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Change the World', 'change_the_world_cover.jpg', '2022', 41, NULL);
 
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Great Myanmar', 'the_great_myanmar_cover.jpg', '2004', 42, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Revolutionary', 'the_revolutionary_cover.jpg', '2006', 42, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The New Chapter', 'the_new_chapter_cover.jpg', '2009', 42, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The King of Myanmar Rap', 'the_king_of_myanmar_rap_cover.jpg', '2012', 42, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Legacy', 'the_legacy_cover.jpg', '2018', 42, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Take it', 'take_it.jpg', '2009', 43, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Changes', 'take_it.jpg', '2015', 43, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Always', 'always.jpg', '2007', 43, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Live In Yangon', 'live_in_yangon.jpg', '2007', 43, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Opposite', 'opposite.jpg', '2003', 43, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Dream Girl', 'dream_girl_cover.jpg', '2009', 44, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Love Potion', 'love_potion_cover.jpg', '2011', 44, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Butterfly', 'butterfly_cover.jpg', '2013', 44, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Heartbeat', 'heartbeat_cover.jpg', '2015', 44, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Unstoppable', 'unstoppable_cover.jpg', '2018', 44, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Voice of Soul', 'voice_of_soul_cover.jpg', '2003', 45, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Forever', 'forever_cover.jpg', '2006', 45, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Love Forever', 'love_forever_cover.jpg', '2009', 45, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Voice', 'the_voice_cover.jpg', '2012', 45, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Timeless Voice', 'timeless_voice_cover.jpg', '2016', 45, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('My World', 'my_world_cover.jpg', '2005', 46, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('In Love', 'in_love_cover.jpg', '2008', 46, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Forever Yours', 'forever_yours_cover.jpg', '2011', 46, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Best of Me', 'the_best_of_me_cover.jpg', '2014', 46, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Love Story', 'love_story_cover.jpg', '2017', 46, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Shining Star', 'shining_star_cover.jpg', '2010', 47, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('My Song', 'my_song_cover.jpg', '2012', 47, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Feelings', 'feelings_cover.jpg', '2014', 47, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Unforgettable', 'unforgettable_cover.jpg', '2016', 47, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Dreams', 'dreams_cover.jpg', '2019', 47, NULL);
+
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Forever', 'forever.jpg', '2008', 48, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Tha Min Lal Pyan', 'tha_min_lal_pyan.jpg', '2005', 48, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Moon and Ocean', 'moon_and_ocean.jpg', '2000', 48, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Wireless Kite', 'wireless_kite.jpg', '1998', 48, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Love Birds', 'love_birds.jpg', '2003', 48, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Fresh Out the Kitchen', 'fresh_out_the_kitchen_cover.jpg', '2012', 49, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The New Wave', 'the_new_wave_cover.jpg', '2014', 49, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rise Up', 'rise_up_cover.jpg', '2016', 49, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Real Deal', 'the_real_deal_cover.jpg', '2018', 49, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Still Rising', 'still_rising_cover.jpg', '2020', 49, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Whispers', 'whispers_cover.jpg', '2011', 50, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Heartbeat', 'heartbeat_cover.jpg', '2013', 50, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Lost in Dreams', 'lost_in_dreams_cover.jpg', '2015', 50, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Unspoken', 'unspoken_cover.jpg', '2017', 50, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Echoes', 'echoes_cover.jpg', '2019', 50, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Love Me', 'love_me_cover.jpg', '2010', 51, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Crazy Love', 'crazy_love_cover.jpg', '2012', 51, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Forever Yours', 'forever_yours_cover.jpg', '2014', 51, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('My Heartbeat', 'my_heartbeat_cover.jpg', '2016', 51, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Lost Without You', 'lost_without_you_cover.jpg', '2018', 51, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Shining Star', 'shining_star_cover.jpg', '2012', 52, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Fly Away', 'fly_away_cover.jpg', '2014', 52, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Unstoppable', 'unstoppable_cover.jpg', '2016', 52, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Dream Big', 'dream_big_cover.jpg', '2018', 52, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Fearless', 'fearless_cover.jpg', '2020', 52, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Timeless', 'timeless_cover.jpg', '2005', 53, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Forever Mine', 'forever_mine_cover.jpg', '2008', 53, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Love Legend', 'love_legend_cover.jpg', '2011', 53, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Voice', 'the_voice_cover.jpg', '2014', 53, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Graham Sings', 'graham_sings_cover.jpg', '2017', 53, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Sweet Memories', 'sweet_memories_cover.jpg', '1985', 54, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Forever in Love', 'forever_in_love_cover.jpg', '1990', 54, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Golden Hits', 'golden_hits_cover.jpg', '1995', 54, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Timeless Classics', 'timeless_classics_cover.jpg', '2000', 54, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Legendary Voice', 'legendary_voice_cover.jpg', '2005', 54, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Journey', 'the_journey_cover.jpg', '2015', 55, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rise Up', 'rise_up_cover.jpg', '2017', 55, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Evolution', 'the_evolution_cover.jpg', '2019', 55, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Legacy', 'the_legacy_cover.jpg', '2021', 55, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Future', 'the_future_cover.jpg', '2023', 55, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rebel Girl', 'rebel_girl_cover.jpg', '2013', 56, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Queen', 'the_queen_cover.jpg', '2015', 56, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Unstoppable', 'unstoppable_cover.jpg', '2017', 56, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Fearless', 'fearless_cover.jpg', '2019', 56, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Empowered', 'empowered_cover.jpg', '2021', 56, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Trap', 'trap_cover.jpg', '2012', 57, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Snare', 'snare_cover.jpg', '2014', 57, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Hunt', 'the_hunt_cover.jpg', '2016', 57, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Game Over', 'game_over_cover.jpg', '2018', 57, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rewind', 'rewind_cover.jpg', '2020', 57, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Ignite', 'ignite_cover.jpg', '2014', 58, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Flame', 'the_flame_cover.jpg', '2016', 58, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Inferno', 'inferno_cover.jpg', '2018', 58, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Phoenix', 'phoenix_cover.jpg', '2020', 58, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Blaze', 'blaze_cover.jpg', '2022', 58, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Dream Girl', 'dream_girl_cover.jpg', '2010', 59, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Love Story', 'love_story_cover.jpg', '2012', 59, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Heartbeat', 'heartbeat_cover.jpg', '2014', 59, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Forever', 'forever_cover.jpg', '2016', 59, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Eternal Love', 'eternal_love_cover.jpg', '2018', 59, NULL);
+
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rockstar', 'rockstar_cover.jpg', '2005', 60, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Voice', 'the_voice_cover.jpg', '2008', 60, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rebel Heart', 'rebel_heart_cover.jpg', '2011', 60, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Timeless', 'timeless_cover.jpg', '2014', 60, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Legacy of Rock', 'legacy_of_rock_cover.jpg', '2017', 60, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Beginning', 'the_beginning_cover.jpg', '2005', 61, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rise Up', 'rise_up_cover.jpg', '2008', 61, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Evolution', 'the_evolution_cover.jpg', '2011', 61, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Legacy', 'the_legacy_cover.jpg', '2014', 61, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Future', 'the_future_cover.jpg', '2017', 61, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rebel Heart', 'rebel_heart_cover.jpg', '2003', 62, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Electric Storm', 'electric_storm_cover.jpg', '2006', 62, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Timeless', 'timeless_cover.jpg', '2009', 62, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Legacy of Rock', 'legacy_of_rock_cover.jpg', '2012', 62, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Forever in Rock', 'forever_in_rock_cover.jpg', '2018', 62, NULL);
+
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rock n'' Roll', 'rock_n_roll_cover.jpg', '1990', 63, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Godfather', 'the_godfather_cover.jpg', '1993', 63, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Timeless Classics', 'timeless_classics_cover.jpg', '1996', 63, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rock Legend', 'rock_legend_cover.jpg', '2000', 63, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Icon', 'the_icon_cover.jpg', '2005', 63, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Voice', 'the_voice_cover.jpg', '1995', 64, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Icon', 'the_icon_cover.jpg', '1998', 64, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rock Legacy', 'rock_legacy_cover.jpg', '2002', 64, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Voice Continues', 'the_voice_continues_cover.jpg', '2006', 64, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rock Forever', 'rock_forever_cover.jpg', '2010', 64, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Love Songs', 'love_songs_cover.jpg', '1985', 65, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Romantic Ballads', 'romantic_ballads_cover.jpg', '1988', 65, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Timeless Love', 'timeless_love_cover.jpg', '1992', 65, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Legend', 'the_legend_cover.jpg', '1996', 65, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Forever in Love', 'forever_in_love_cover.jpg', '2000', 65, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Dream Girl', 'dream_girl_cover.jpg', '2002', 66, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Love Story', 'love_story_cover.jpg', '2005', 66, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Voice', 'the_voice_cover.jpg', '2008', 66, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rock n'' Roll', 'rock_n_roll_cover.jpg', '2011', 66, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Timeless', 'timeless_cover.jpg', '2014', 66, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rockstar', 'rockstar_cover.jpg', '1998', 67, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Voice of Rock', 'the_voice_of_rock_cover.jpg', '2001', 67, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Timeless Rock', 'timeless_rock_cover.jpg', '2004', 67, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Rock Legacy', 'rock_legacy_cover.jpg', '2007', 67, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Icon of Rock', 'the_icon_of_rock_cover.jpg', '2010', 67, NULL);
+
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Unique Melodies', 'unique_melodies_cover.jpg', '1985', 68, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Poet', 'the_poet_cover.jpg', '1988', 68, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Timeless Classics', 'timeless_classics_cover.jpg', '1991', 68, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('The Legend', 'the_legend_cover.jpg', '1994', 68, NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Forever in Music', 'forever_in_music_cover.jpg', '1997', 68, NULL);
+
