@@ -38,7 +38,7 @@ public class Album {
 
     private String title;
     private String titleCover;
-    private String releasedDate;
+    private String releasedYear;
 
     // One-to-many: album tracks
     // This is the parent side, relationship owned by Track

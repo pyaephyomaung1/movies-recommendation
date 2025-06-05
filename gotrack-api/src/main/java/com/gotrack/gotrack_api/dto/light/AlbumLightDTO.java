@@ -11,4 +11,5 @@ public class AlbumLightDTO {
     private int id;
     private String title;
     private String titleCover;
+    private String releasedYear;
 }

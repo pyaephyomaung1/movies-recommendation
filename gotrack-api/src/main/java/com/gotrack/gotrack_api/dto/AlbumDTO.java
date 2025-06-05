@@ -14,7 +14,7 @@ public class AlbumDTO {
     private int id;
     private String title;
     private String titleCover;
-    private String releasedDate;
+    private String releasedYear;
     private List<TrackDTO> tracks;
     private Set<GenreDTO> genres;
     private ArtistDTO artistOwner;

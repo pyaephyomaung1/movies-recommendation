@@ -18,7 +18,8 @@ public class EntityUtils {
         Set<AlbumLightDTO> albums = artist.getAlbums().stream().map(album -> new AlbumLightDTO(
             album.getId(),
             album.getTitle(),
-            album.getTitleCover()
+            album.getTitleCover(),
+            album.getReleasedYear()
         )).collect(Collectors.toSet());
         Set<BandLightDTO> bands = artist.getBands().stream().map(band -> new BandLightDTO(
             band.getId(),
@@ -30,7 +31,8 @@ public class EntityUtils {
                 AlbumLightDTO albumDTO = new AlbumLightDTO(
                     track.getAlbum().getId(),
                     track.getAlbum().getTitle(),
-                    track.getAlbum().getTitleCover()
+                    track.getAlbum().getTitleCover(),
+                    track.getAlbum().getReleasedYear()
                 );
                 return new TrackLightDTO(
                     track.getId(),
