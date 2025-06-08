@@ -1,10 +1,14 @@
 package com.gotrack.gotrack_api.utils;
 
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import com.gotrack.gotrack_api.dto.AlbumDTO;
 import com.gotrack.gotrack_api.dto.ArtistDTO;
 import com.gotrack.gotrack_api.dto.BandDTO;
+import com.gotrack.gotrack_api.dto.GenreDTO;
+import com.gotrack.gotrack_api.dto.TrackDTO;
 import com.gotrack.gotrack_api.model.Album;
 import com.gotrack.gotrack_api.model.Artist;
 import com.gotrack.gotrack_api.model.Band;
@@ -14,7 +18,7 @@ import com.gotrack.gotrack_api.model.Track;
 
 
 public class EntityUtils {
-    public static String imagePath = "http://localhost:8080/images/";
+    public static String imagePath = "http://localhost:8080/image/";
     
     public static ArtistDTO toArtistDTO(Artist artist){
         Set<Integer> bandId = artist.getBands().stream().map(Band::getId).collect(Collectors.toSet());
@@ -22,7 +26,7 @@ public class EntityUtils {
         Set<Integer> trackId = artist.getTracks().stream().map(Track::getId).collect(Collectors.toSet());
         Set<Integer> genreId = artist.getGenres().stream().map(Genre::getId).collect(Collectors.toSet());
 
-        String imageUrl = imagePath + artist.getProfileImage();
+        String imageUrl = imagePath + "artist/" +artist.getProfileImage();
         ArtistDTO artistDTO = new ArtistDTO();
         artistDTO.setId(artist.getId());
         artistDTO.setName(artist.getName());
@@ -52,17 +56,57 @@ public class EntityUtils {
         bandDTO.setActiveYear(band.getActiveYear());
         bandDTO.setOverview(band.getOverview());
         bandDTO.setOverview(band.getOverview());
-        bandDTO.set
+        bandDTO.setMembers(memberId);
+        bandDTO.setAlbumId(albumId);
+        bandDTO.setTrackId(trackId);
         return bandDTO;
     }
-}   
 
-//  private int id;
-//     private String bandName;
-//     private String bandCover;
-//     private String activeYear;
-//     private String origin;
-//     private String overview;
-//     private Set<Integer> members;
-//     private Set<Integer> albumId;
-//     private Set<Integer> trackId;
+    public static AlbumDTO toAlbumDTO(Album album){
+        String imageUrl = imagePath + album.getTitleCover();
+        List<Integer> trackId = album.getTracks().stream().map(Track::getId).collect(Collectors.toList());
+        Set<Integer> genreId = album.getGenres().stream().map(Genre::getId).collect(Collectors.toSet());
+        Integer artistOwnerId = album.getArtistOwner().getId();
+        Integer bandOwerId = album.getBandOwner().getId();
+
+        AlbumDTO albumDTO = new AlbumDTO();
+        albumDTO.setId(album.getId());
+        albumDTO.setTitle(album.getTitle());
+        albumDTO.setTitleCover(imageUrl);
+        albumDTO.setReleasedYear(album.getReleasedYear());
+        albumDTO.setTrackId(trackId);
+        albumDTO.setGenreId(genreId);
+        albumDTO.setArtistOwnerId(artistOwnerId);
+        albumDTO.setBandOwnerId(bandOwerId);
+        return albumDTO;
+    }
+
+    public static TrackDTO toTrackDTO(Track track){
+        String imageUrl = imagePath + track.getAlbum().getTitleCover();
+
+        Integer albumId = track.getAlbum().getId();
+        Integer bandId = track.getBand().getId();
+        Set<Integer> genreId = track.getGenres().stream().map(Genre::getId).collect(Collectors.toSet());
+
+        TrackDTO trackDTO = new TrackDTO();
+        trackDTO.setId(track.getId());
+        trackDTO.setAudioFile(track.getAudioFile());
+        trackDTO.setAlbumId(albumId);
+        trackDTO.setBandId(bandId);
+        trackDTO.setGenreId(genreId);
+        return trackDTO;
+    }
+
+
+    public static GenreDTO toGenreDTO(Genre genre){
+        Set<Integer> albumId = genre.getAlbums().stream().map(Album::getId).collect(Collectors.toSet());
+        Set<Integer> trackId = genre.getTracks().stream().map(Track::getId).collect(Collectors.toSet());
+
+        GenreDTO genreDTO = new GenreDTO();
+        genreDTO.setId(genre.getId());
+        genreDTO.setName(genre.getName());
+        genreDTO.setAlbumId(albumId);
+        genreDTO.setTrackId(trackId);
+        return genreDTO;
+    }   
+}   
