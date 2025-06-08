@@ -1,14 +1,14 @@
 -- rosie --
 -- INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('rosie', 'rosie.jpg', '2024-12-06', 1 , NULL)
-INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('R', 'album_cover.jpg', '2021', 1 , NULL)
-INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('rosie', 'album_cover.jpg', '2024', 1 , NULL)
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('R', 'album_cover.jpg', '2021', 1 , NULL);
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('rosie', 'album_cover.jpg', '2024', 1 , NULL);
 
 -- lisa --
-INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Alter Ego', 'album_cover.jpg', '2024', 2 , NULL)
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Alter Ego', 'album_cover.jpg', '2024', 2 , NULL);
 
-INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Ruby', 'album_cover.jpg', '2025', 3 , NULL)
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Ruby', 'album_cover.jpg', '2025', 3 , NULL);
 
-INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Amortage', 'album_cover.jpg', '2025', 4 , NULL)
+INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Amortage', 'album_cover.jpg', '2025', 4 , NULL);
 
 INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Off the Wall', 'album_cover.jpg', '1979', 5, NULL);
 INSERT INTO album (title, title_cover, released_year, artist_id, band_id) VALUES ('Thriller', 'album_cover.jpg', '1982', 5, NULL);
