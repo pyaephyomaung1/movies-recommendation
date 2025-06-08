@@ -13,8 +13,8 @@ public class TrackDTO {
     private int id;
     private String title;
     private String audioFile;
-    private AlbumDTO album;
-    private ArtistDTO artist;
-    private BandDTO band;
-    private Set<GenreDTO> genres;
+    private Integer albumId;
+    private Integer artistId;
+    private Integer bandId;
+    private Set<Integer> genreId;
 }

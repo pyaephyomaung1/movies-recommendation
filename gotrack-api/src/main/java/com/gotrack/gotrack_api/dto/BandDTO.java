@@ -16,7 +16,7 @@ public class BandDTO {
     private String activeYear;
     private String origin;
     private String overview;
-    private Set<ArtistDTO> members;
-    private Set<AlbumDTO> albums;
-    private Set<TrackDTO> tracks;
+    private Set<Integer> members;
+    private Set<Integer> albumId;
+    private Set<Integer> trackId;
 }

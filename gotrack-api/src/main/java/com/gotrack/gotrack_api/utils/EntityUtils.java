@@ -4,68 +4,65 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import com.gotrack.gotrack_api.dto.ArtistDTO;
-import com.gotrack.gotrack_api.dto.light.AlbumLightDTO;
-import com.gotrack.gotrack_api.dto.light.BandLightDTO;
-import com.gotrack.gotrack_api.dto.light.TrackLightDTO;
+import com.gotrack.gotrack_api.dto.BandDTO;
+import com.gotrack.gotrack_api.model.Album;
 import com.gotrack.gotrack_api.model.Artist;
+import com.gotrack.gotrack_api.model.Band;
+import com.gotrack.gotrack_api.model.Genre;
+import com.gotrack.gotrack_api.model.Track;
+
 
 
 public class EntityUtils {
     public static String imagePath = "http://localhost:8080/images/";
-   
-    public static ArtistDTO toArtistDTO(Artist artist) {
+    
+    public static ArtistDTO toArtistDTO(Artist artist){
+        Set<Integer> bandId = artist.getBands().stream().map(Band::getId).collect(Collectors.toSet());
+        Set<Integer> albumId = artist.getAlbums().stream().map(Album::getId).collect(Collectors.toSet());
+        Set<Integer> trackId = artist.getTracks().stream().map(Track::getId).collect(Collectors.toSet());
+        Set<Integer> genreId = artist.getGenres().stream().map(Genre::getId).collect(Collectors.toSet());
+
         String imageUrl = imagePath + artist.getProfileImage();
-        Set<AlbumLightDTO> albums = artist.getAlbums().stream().map(album -> new AlbumLightDTO(
-            album.getId(),
-            album.getTitle(),
-            album.getTitleCover(),
-            album.getReleasedYear()
-        )).collect(Collectors.toSet());
-        Set<BandLightDTO> bands = artist.getBands().stream().map(band -> new BandLightDTO(
-            band.getId(),
-            band.getBandName(),
-            band.getBandCover()
-        )).collect(Collectors.toSet());
-        Set<TrackLightDTO> tracks = artist.getTracks().stream().map(
-            track -> {
-                AlbumLightDTO albumDTO = new AlbumLightDTO(
-                    track.getAlbum().getId(),
-                    track.getAlbum().getTitle(),
-                    track.getAlbum().getTitleCover(),
-                    track.getAlbum().getReleasedYear()
-                );
-                return new TrackLightDTO(
-                    track.getId(),
-                    track.getTitle(),
-                    albumDTO
-                );
-            }
-        ).collect(Collectors.toSet());
-        return new ArtistDTO(
-            artist.getId(),
-            artist.getName(),
-            imageUrl,
-            artist.getDateOfBirth(),
-            artist.getDateOfDeath(),
-            artist.getNationality(),
-            artist.getBiography(),
-            bands,
-            albums,
-            tracks
-        );
+        ArtistDTO artistDTO = new ArtistDTO();
+        artistDTO.setId(artist.getId());
+        artistDTO.setName(artist.getName());
+        artistDTO.setProfileImage(imageUrl);
+        artistDTO.setDateOfBirth(artist.getDateOfBirth());
+        artistDTO.setDateOfBirth(artist.getDateOfDeath());
+        artistDTO.setNationality(artist.getNationality());
+        artistDTO.setBiography(artist.getBiography());
+        artistDTO.setBandId(bandId);
+        artistDTO.setAlbumId(albumId);
+        artistDTO.setTrackId(trackId);
+        artistDTO.setGenreId(genreId);
+        return artistDTO;
     }
 
-    // public static Artist toArtist(
-    //     ArtistDTO dto,
-    //     BandRepository bandRepository,
-    //     AlbumRepository albumRepository,
-    //     TrackRepository trackRepository,
-    //     GenreRepository genreRepository
-    // ){
-    //     if(dto == null) return null;
+    public static BandDTO toBandDTO(Band band){
 
-    //     Artist artist = new Artist();
+        String imageUrl = imagePath + band.getBandCover();
+        Set<Integer> memberId = band.getMembers().stream().map(Artist::getId).collect(Collectors.toSet());
+        Set<Integer> albumId = band.getAlbums().stream().map(Album::getId).collect(Collectors.toSet());
+        Set<Integer> trackId = band.getTracks().stream().map(Track::getId).collect(Collectors.toSet());
 
-    //     return artist;
-    // }
-}
+        BandDTO bandDTO = new BandDTO();
+        bandDTO.setId(band.getId());
+        bandDTO.setBandName(band.getBandName());
+        bandDTO.setBandCover(imageUrl);
+        bandDTO.setActiveYear(band.getActiveYear());
+        bandDTO.setOverview(band.getOverview());
+        bandDTO.setOverview(band.getOverview());
+        bandDTO.set
+        return bandDTO;
+    }
+}   
+
+//  private int id;
+//     private String bandName;
+//     private String bandCover;
+//     private String activeYear;
+//     private String origin;
+//     private String overview;
+//     private Set<Integer> members;
+//     private Set<Integer> albumId;
+//     private Set<Integer> trackId;

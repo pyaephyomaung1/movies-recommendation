@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 public class GenreDTO {
     private int id;
     private String name;
-    private Set<AlbumDTO> albums;
-    private Set<TrackDTO> tracks;
+    private Set<Integer> albumId;
+    private Set<Integer> trackId;
 }
