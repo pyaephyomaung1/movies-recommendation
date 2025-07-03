@@ -10,10 +10,14 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.HashSet;
 import java.util.Set;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Actor {
 
     @Id
@@ -50,4 +54,7 @@ public class Actor {
 
     @ManyToMany(mappedBy = "actors")
     private Set<Movie> movies = new HashSet<>();
+
+    @ManyToMany(mappedBy = "actors")
+    private Set<Series> series = new HashSet<>();
 }
